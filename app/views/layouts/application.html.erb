@@ -4,12 +4,26 @@
   <title>Kai</title>
    <%= stylesheet_link_tag 'application', media: 'all' %>
    <%= javascript_include_tag 'application'%>
+   <script type="text/javascript" language="JavaScript">
+      function set_logo_size()
+      {
+          var window_width = $(window).width();
+          $('.logo-pic').attr('style', 'width:' + window_width + 'px;');
+      }
+      $(document).ready(function() {
+          set_logo_size();
+          $(window).bind('resize', function() { set_logo_size(); });
+      });
+  </script>
 </head>
 
 <body class="background">
+      <div class="col-md-12 logo-pic">
+        <%= image_tag "logo.png", :class => "logo-pic"%>
+      </div>
      <div class="text-center">
         <span>
-            <h1 class="title-text logo">Kai Ritchie<div class="codetext logo2">{ Programmer }</div></h1>
+            <h1 class="title-text logo"><div class="logo-name">Kai Ritchie</div><div class="codetext logo2">{ Programmer }</div></h1>
         </span>
     </div>
     
@@ -31,11 +45,14 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to "About", root_path %></li>
                 <li><%= link_to "My Skills", skills_path %></li>
-                <li><%= link_to "Contact Me", root_path %></li>
+                <li><%= link_to "Contact Me", new_contact_path %></li>
               </ul>
             </div>
       </div>
     </nav>
+  <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
     
     <%= yield %>
 </body>

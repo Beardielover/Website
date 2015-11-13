@@ -2,11 +2,11 @@
 @import "bootstrap";
 
 body {
-  background: -webkit-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #517fa4 10%, #243949 90%); /* W3C */
+  background: -webkit-linear-gradient(90deg, #739CBD 10%, #316D9E 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #739CBD 10%, #316D9E 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #739CBD 10%, #316D9E 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #739CBD 10%, #316D9E 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #739CBD 10%, #316D9E 90%); /* W3C */
   padding-top: 250px;
 }
 
@@ -20,10 +20,43 @@ body {
 
 .well {
    background-color: rgba(245, 245, 245, 0.5);
+   border: 1px solid #969696;
+}
+
+.logo-pic {
+    background-color: #E2E6D3;
+    width: 1349px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    z-index: -200;
+    left: 0;
+}
+
+.navbar-default.main-nav{
+    background-color: #BFBFBF;
+    border: 2px solid #ADADAD;
+}
+
+.navbar-default .navbar-brand {
+    color: #242424;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #383838;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #242424;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #383838;
 }
 
 .main-nav {
-    background-color:  #A3A7AF;
+    background-color: #BFBFBF;
     border-color: #7F7F7F;
     position: relative;
     margin-bottom: 0px;
@@ -41,6 +74,12 @@ body {
    width: 100%;
 }
 
+.alert-scrolled {
+   position: fixed;
+   top:50px;
+   width: 100%;
+}
+
 .logo {
   font-weight: bold;
   font: 80px solid black;
@@ -52,6 +91,43 @@ body {
    font-family: monaco, monospace;
 }
 
+.padtop {
+    padding-top: 40px;
+}
+
+.padtop-small {
+    padding-top: 10px;
+}
+
+.chars-remaining {
+    float: right;
+}
+
+.logo-name {
+    font-family: "AR destine", "Times New Roman Thin";
+    color: #C70808;
+}
+
+.skill-image {
+    float: left;
+    height: 256px;
+    width: 256px;
+}
+
+.skill-well {
+    height: 300px;
+}
+
+.alert-notice {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  width: 400px;
+}
+
+.alert {
+  width: 400px;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
